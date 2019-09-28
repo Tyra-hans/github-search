@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,9 @@ import { HomepageComponent } from './homepage/homepage.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // tslint:disable-next-line: deprecation
+    HttpModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
