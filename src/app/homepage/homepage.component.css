@@ -1,0 +1,21 @@
+.header {
+    font-size: 30px;
+    font-style: italic;
+    font-family: sans-serif;
+}
+
+.img-fluid {
+    width: 300px;
+    height: 300px;
+    float: right;
+}
+
+.body {
+    font-size: 20px;
+    font-style: italic;
+    font-family: sans-serif;
+}
+
+.jumbotron {
+    text-align: center;
+}
