@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg fixed-top">
     <a class="navbar-brand"><b>GitHub Search</b></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -12,24 +12,22 @@
 </nav>
 <div class="jumbotron">
     <h1>Welcome to <strong>GitHub Search</strong>!</h1>
-    <h3>simply search a repository or a user</h3>
+    <h5>simply search a repository or a user</h5>
 </div>
-<div class="row">
-    <div class="col-md-6">
+<div class="row about">
+    <div class="col-lg-4 col-md-4 col-sm-12">
 
         <img class="img-fluid" src="{{post.avatar_url}}" alt="my avatar">
-        <div>
-
-        </div>
+        <span class="text-justify"></span>
     </div>
-    <div>
-        <div class='body col-md-6'>
-            <p>{{post.login}}</p>
-        </div>
-        <div class="body">
-            <p>followers: {{post.followers}}</p>
-            <p>following: {{post.following}}</p>
-        </div>
 
+    <div class='body col-lg-8 col-md-8 col-sm1-2 desc'>
+        <p class="title">{{post.login}}</p>
     </div>
+    <div class="body col-lg-8 col-md-8 col-sm1-2 desc">
+        <p>followers: {{post.followers}}</p>
+        <p>following: {{post.following}}</p>
+    </div>
+
+
 </div>

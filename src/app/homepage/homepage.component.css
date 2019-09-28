@@ -16,6 +16,76 @@
     font-family: sans-serif;
 }
 
-.jumbotron {
+h1 {
     text-align: center;
+    color: #F97300;
+    padding-top: 5%;
+}
+
+h5 {
+    color: black;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.navbar {
+    background-color: #F97300;
+}
+
+.navbar-nav,
+.navbar-brand {
+    color: #F4F4F4;
+    cursor: pointer;
+}
+
+.nav-link {
+    margin-right: 1em !important;
+}
+
+.navbar-brand:hover,
+.navbar-nav:hover {
+    background: #f4f4f4;
+    color: #F97300;
+}
+
+.about {
+    margin: 4em 0;
+    padding: 1em;
+    position: relative;
+}
+
+.about h1 {
+    color: #F97300;
+    margin: 2em;
+}
+
+.about img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.about span {
+    display: block;
+    color: #888;
+    position: absolute;
+    left: 115px;
+}
+
+.about .desc {
+    padding: 2em;
+    border-left: 4px solid #10828C;
+}
+
+.about .desc h3 {
+    color: #10828C;
+}
+
+.about .desc p {
+    line-height: 2;
+    color: #888;
+}
+
+.title {
+    font-size: 48px;
 }
