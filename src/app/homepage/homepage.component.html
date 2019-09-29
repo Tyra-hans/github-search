@@ -29,15 +29,15 @@
         <p>following: {{post.following}}</p>
     </div>
     <div class="card" class="repos">
-        <div *ngFor="let rep of myRepo.myRepoArray">
+        <div *ngFor="let myrepo of myrepo">
             <div class="panel panel-default">
                 <div class="card-header" style="background:rgba(0, 0, 0, 0.5); color: navajowhite">
-                    <h4>{{rep.name}} </h4>
+                    <h4>{{myrepo.name}} </h4>
                 </div>
                 <div class="card-body" style="background:rgba(0, 0, 0, 0.3); color:navajowhite">
-                    <p> {{rep.description}}</p>
-                    <p>Language(s): {{rep.language}}</p>
-                    <button type="button" name="button" class="btn btn-dark"><a href="{{rep.html_url}}" target="_blank">View
+                    <p> {{myrepo.description}}</p>
+                    <p>Language(s): {{myrepo.language}}</p>
+                    <button type="button" name="button" class="btn btn-dark"><a href="#" target="_blank">View
                 on GitHub</a></button>
                 </div>
 
