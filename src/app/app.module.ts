@@ -9,6 +9,7 @@ import { HttpModule } from '@angular/http';
 import { GithubprofileComponent } from './githubprofile/githubprofile.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { RepositoriesComponent} from './repositories/repositories.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { RepositoriesComponent} from './repositories/repositories.component';
     GithubprofileComponent,
     NotfoundComponent,
     RepositoriesComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
