@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
+import { Myprofile} from '../myprofile';
+import {Myrepo} from '../myrepo';
 
 @Component({
   selector: 'app-homepage',
@@ -7,14 +9,17 @@ import { Http } from '@angular/http';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-post: any;
+  post: any;
+  myprofile: Myprofile;
+  myrepo: Myrepo;
+  username: string;
   // tslint:disable-next-line: deprecation
-  constructor(private http: Http ) {
+  constructor(private http: Http) {
     http.get('https://api.github.com/users/tyra-hans')
-    .subscribe(response => {
-      this.post = response.json() ;
-    });
-   }
+      .subscribe(response => {
+        this.post = response.json();
+      });
+  }
 
   ngOnInit() {
   }
