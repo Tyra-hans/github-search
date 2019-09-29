@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'repositories', component: RepositoriesComponent },
   { path: 'homepage', component: HomepageComponent },
   { path: '**', component: NotfoundComponent },
-  { path: ' ', component: HomepageComponent }
+  { path: ' ', redirectTo: './homepage', pathMatch: 'full'  }
 ];
 
 @NgModule({

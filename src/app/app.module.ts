@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,6 +26,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppRoutingModule,
     // tslint:disable-next-line: deprecation
     HttpModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { Myprofile } from '../myprofile';
 import { Myrepo } from '../myrepo';
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-homepage',
@@ -13,8 +14,9 @@ export class HomepageComponent implements OnInit {
   myprofile: Myprofile;
   myrepo: any;
   username: string;
+  test: any;
   // tslint:disable-next-line: deprecation
-  constructor(private http: Http) {
+  constructor(private http: Http, private githubuser: HttpService) {
     http.get('https://api.github.com/users/tyra-hans')
       .subscribe(response => {
         this.post = response.json();
@@ -25,6 +27,10 @@ export class HomepageComponent implements OnInit {
         this.myrepo = response.json();
 
       });
+
+      this.test = this.githubuser.getProfileInfo('Tyra-hans');
+      console.log( 'tyra was here----------------' , this.test);
+
   }
 
   ngOnInit() {
