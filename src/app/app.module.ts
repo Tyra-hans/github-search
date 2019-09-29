@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { HttpModule } from '@angular/http';
+import { MyRepoComponent } from './my-repo/my-repo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent
+    HomepageComponent,
+    MyRepoComponent
 
   ],
   imports: [
