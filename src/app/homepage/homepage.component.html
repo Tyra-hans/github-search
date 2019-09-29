@@ -1,6 +1,6 @@
 <div class="jumbotron">
     <h1>Welcome to <strong>GitHub Search</strong>!</h1>
-    <h5>simply search a repository or a user</h5>
+    <h5 appRedblack>simply search a repository or a user</h5>
 </div>
 <div class="row about">
     <div class="col-lg-4 col-md-4 col-sm-12">
@@ -28,7 +28,7 @@
                             </div>
                             <div class="card-body">
                                 <p> {{myrepo.description}}</p>
-                                <p>Language(s): {{myrepo.language}}</p>
+                                <p appRedblack>Language(s): {{myrepo.language}}</p>
                                 <button type="button" name="button" class="btn btn-outline-warning"><a href='{{myrepo.html_url}}' target="_blank">View
                 on GitHub</a></button>
                             </div>

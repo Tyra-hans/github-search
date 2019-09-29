@@ -12,6 +12,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { RepositoriesComponent} from './repositories/repositories.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ShortenPipe } from './shorten.pipe';
+import { RedblackDirective } from './redblack.directive';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ShortenPipe } from './shorten.pipe';
     RepositoriesComponent,
     NavbarComponent,
     ShortenPipe,
+    RedblackDirective,
   ],
   imports: [
     BrowserModule,
