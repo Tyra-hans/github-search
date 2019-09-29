@@ -5,8 +5,6 @@
 }
 
 .img-fluid {
-    width: 300px;
-    height: 300px;
     float: right;
 }
 
@@ -19,7 +17,7 @@
 h1 {
     text-align: center;
     color: #F97300;
-    padding-top: 5%;
+    padding-top: 20px;
 }
 
 h5 {
@@ -88,4 +86,8 @@ h5 {
 
 .title {
     font-size: 48px;
+}
+
+.repodisplay {
+    display: inline;
 }
