@@ -1,4 +1,6 @@
 @import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
 body {
     background-color: #E9ECEF;
 }

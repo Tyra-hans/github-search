@@ -10,8 +10,8 @@ const routes: Routes = [
   { path: 'githubprofile', component: GithubprofileComponent},
   { path: 'repositories', component: RepositoriesComponent },
   { path: 'homepage', component: HomepageComponent },
-  { path: '**', component: NotfoundComponent },
-  { path: ' ', redirectTo: './homepage', pathMatch: 'full'  }
+  { path: '', redirectTo: '/homepage', pathMatch: 'full'},
+  { path: '**', component: NotfoundComponent}
 ];
 
 @NgModule({

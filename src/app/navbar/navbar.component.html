@@ -1,12 +1,20 @@
-<nav class="navbar navbar-expand-lg fixed-top">
-    <a class="navbar-brand active" routerLink="../homepage"><b>GitHub Search</b></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <a class="nav-item nav-link active" routerLink="../githubprofile">users<span class="sr-only"></span></a>
-            <a class="nav-item nav-link" routerLink="../repositories">repositories</a>
+<div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+        <div class="nav-title" routerLink="../homepage">
+            <p>GitHub Search</p>
         </div>
     </div>
-</nav>
+    <div class="nav-btn">
+        <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    </div>
+
+    <div class="nav-links">
+        <a routerLink="../githubprofile">Users</a>
+        <a routerLink="../repositories">Repositories</a>
+    </div>
+</div>

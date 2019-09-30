@@ -5,37 +5,29 @@
 <div class="row about">
     <div class="col-lg-4 col-md-4 col-sm-12">
 
-        <img class="img-fluid" src="{{post.avatar_url}}" alt="my avatar">
+        <img class="img-fluid" src="{{tyProfile.avatar_url}}" alt="my avatar">
         <span class="text-justify"></span>
     </div>
 
-    <div class='body col-lg-8 col-md-8 col-sm1-2 desc'>
-        <p class="title">{{post.login}}</p>
+    <div class='body col-lg-8 col-md-8 col-sm-2 desc'>
+        <p>{{tyProfile.login}}</p>
+        <p>followers: {{tyProfile.followers}}</p>
+        <p>following: {{tyProfile.following}}</p>
     </div>
-    <div class="body col-lg-8 col-md-8 col-sm1-2 desc">
-        <p>followers: {{post.followers}}</p>
-        <p>following: {{post.following}}</p>
-    </div>
-    <div class="portfolio">
-        <h1 class="text-centre">My Repositories</h1>
-        <div class="container">
-            <div>
-                <div class="col-lg-4 col-md-4 cold-sm-12 repodisplay">
-                    <div *ngFor="let myrepo of myrepo">
-                        <div class="panel panel-default">
-                            <div class="card-header">
-                                <h4>{{myrepo.name | shorten}} </h4>
-                            </div>
-                            <div class="card-body">
-                                <p> {{myrepo.description}}</p>
-                                <p appRedblack>Language(s): {{myrepo.language}}</p>
-                                <button type="button" name="button" class="btn btn-outline-warning"><a href='{{myrepo.html_url}}' target="_blank">View
-                on GitHub</a></button>
-                            </div>
 
-                        </div>
-                    </div>
-                </div>
+    <div class="col-lg-6 col-md-6 col-sm-12">
+        <div *ngFor="let tyRepos of tyRepos">
+
+            <div class="card-header">
+                <h4>{{tyRepos.name | shorten}} </h4>
+            </div>
+            <div class="card-body">
+                <p> {{tyRepos.description}}</p>
+                <p appRedblack>Language(s): {{tyRepos.language}}</p>
+                <button type="button" name="button" class="btn
+          btn-outline-warning"><a href='{{tyRepos.html_url}}'
+            target="_blank">View
+            on GitHub</a></button>
             </div>
         </div>
     </div>

@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
-import { Myprofile } from '../myprofile';
-import { Myrepo } from '../myrepo';
-import { HttpService } from '../http.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-homepage',
@@ -10,30 +7,34 @@ import { HttpService } from '../http.service';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-  post: any;
-  myprofile: Myprofile;
-  myrepo: any;
-  username: string;
-  test: any;
+  tyProfile: any;
+  tyRepos: any;
+  username = 'Tyra-hans';
   // tslint:disable-next-line: deprecation
-  constructor(private http: Http, private githubuser: HttpService) {
-    http.get('https://api.github.com/users/tyra-hans')
-      .subscribe(response => {
-        this.post = response.json();
-
-      });
-    http.get('https://api.github.com/users/tyra-hans/repos')
-      .subscribe(response => {
-        this.myrepo = response.json();
-
-      });
-
-      this.test = this.githubuser.getProfileInfo('Tyra-hans');
-      console.log( 'tyra was here----------------' , this.test);
-
+  constructor(
+    private userservice: UserService
+  )  {
+    this.getMyProfile();
+    this.getMyRepos();
   }
 
   ngOnInit() {
   }
+
+  getMyProfile(){
+
+      this.userservice.getGithubUser(this.username).then((response)=>{
+        console.log('Tyra Profile.----------------', response);
+        this.tyProfile = response;
+      })
+    }
+
+  getMyRepos() {
+
+      this.userservice.getGithubRepos(this.username).then((response) => {
+        console.log('Ty Repo.----------------', response);
+        this.tyRepos = response;
+      })
+    }
 
 }
